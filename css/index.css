@@ -170,7 +170,7 @@ img {
 }
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row;
   align-items: center;
   font-size: 2rem;
@@ -196,19 +196,17 @@ header nav a {
   header {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     font-size: 2rem;
     border-bottom: 2px dashed #C0C0C0;
     margin: 1% 1% 0;
     padding: 2% 0;
-    margin-left: 21% ;
-    margin-right: 21%;
   }
   header nav {
     display: flex;
     justify-content: space-between;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     width: 400px;
   }
   header nav a {
@@ -277,36 +275,83 @@ header nav a {
   border-top: 2px dashed #C0C0C0;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
 }
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
 }
+.home .content-pick .destination .btn {
+  background-color: #2f98aa;
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 20px;
+  border-top-left-radius: 15px ;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
 @media (max-width: 500px) {
-  html,
-  body {
-    max-width: 90%;
+  html .home,
+  body .home {
     display: flex;
     justify-content: center;
     flex-flow: column;
     margin-left: 4%;
     margin-right: 0%;
+    width: 90%;
   }
-  html html .content-pick,
-  body html .content-pick,
-  html body .content-pick,
-  body body .content-pick {
+  html .home .content-section,
+  body .home .content-section {
     display: flex;
     flex-direction: column;
     align-content: center;
     width: 100%;
-    font-size: 1.5rem;
-    border: solid;
+    font-size: 1rem;
   }
-  html html .content-pick .destination,
-  body html .content-pick .destination,
-  html body .content-pick .destination,
-  body body .content-pick .destination {
-    border: solid;
+  html .home .content-section .img-content,
+  body .home .content-section .img-content {
+    display: flex;
+    align-items: center;
+    width: 90%;
+  }
+  html .home .content-section .text-content,
+  body .home .content-section .text-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 90%;
+    font-size: 1rem;
+  }
+  html .home .inverse-content,
+  body .home .inverse-content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  html .home .content-pick,
+  body .home .content-pick {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  html .home .content-pick .destination,
+  body .home .content-pick .destination {
+    width: 90%;
+  }
+  html .home .content-pick .destination .btn,
+  body .home .content-pick .destination .btn {
+    background-color: #5392ff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    border-top-left-radius: 15px ;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
   }
 }
